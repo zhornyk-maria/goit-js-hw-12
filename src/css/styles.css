@@ -7,6 +7,7 @@
 @import url('./reset.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./loader.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +23,130 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  outline: none;
+  transition: border-color ease 0.5s;
+}
+
+.search-input:hover {
+  border-color: #000;
+}
+
+.search-input:focus {
+  border-color: #4e75ff;
+}
+
+.search-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  transition: background-color ease 0.5s;
+}
+
+.search-btn:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.gallery > a {
+  flex-basis: calc((100% - 48px) / 3);
+  border: 1px solid #808080;
+  width: 360px;
+  height: 200px;
+  position: relative;
+}
+
+.gallery > a > img {
+  max-height: 100%;
+  width: 100%;
+}
+
+.gallery > a > div {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.gallery > a > div > span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.gallery > a > div > span {
+  font-weight: 400;
+  line-height: 2;
+}
+
+.load-more {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  transition: background-color ease 0.5s;
+}
+
+.load-more:hover {
+  background-color: #6c8cff;
+}
+
+.load-more.hidden {
+  display: none;
 }
